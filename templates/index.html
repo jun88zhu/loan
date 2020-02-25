@@ -2,8 +2,49 @@
 
 {% block body %}
 
+<form action="" method="POST">    
 <p>
-    123456
+<label for="getmoney">
+    Loan amount:  <input type="text" name="money" id="getmoney" placeholder="please enter your money" autofocus required>
+</label>
 </p>
+
+<p>
+<label for="getyears">
+    number of years:  <input type="text" name="years" id="getyears" placeholder="please enter the years" required> 
+</label>
+</p>
+
+<p>
+<label for="getpayments">
+    payments per year:  <input type="text" name="payments_per_year" id="getpayments" placeholder="please enter the payments per years"
+    required>
+</label>
+</p>
+
+<p>
+<label for="getannualrate">
+    annual rate:  <input type="text" name="the annual rate" id="getannualrate" placeholder="please enter the annual rate" required>
+</label>
+</p>
+
+<p>
+<label for="getperiods">
+    number of payment periods:  <input type="text" name="the number of payment periods" id="getperiods" 
+    placeholder="please enter the number of payment periods" required>
+</label>
+</p>
+
+<input class="button" type="submit" formaction="/over" value="Submit">
+<input type="reset" value="Clear">
+
+
+</form> 
+
+<p>
+    <h3> {{ display }} </h3>
+
+</p>
+
 
 {% endblock %}
